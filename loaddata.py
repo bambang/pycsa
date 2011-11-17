@@ -1,5 +1,6 @@
 # read binary data from sun raster file
 # result is matrix  [ numEchoes , elmcount ] of complex number
+# Author: Bambang Setiadi 
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -35,3 +36,4 @@ echoData = np.fromfile(f, dtype=data_type_complex64, count=numEchoes*ras_width).
 f.close()    
 plt.imshow(np.abs(echoData))
 plt.show()
+
